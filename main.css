@@ -1,0 +1,73 @@
+body {
+	margin: 0px;
+	background-color: #efefef;
+}
+
+.bar {
+	background-color: #6ad2f3;
+	padding: 10px;
+}
+
+h1 {
+	color: #fff;
+	text-align: center;
+	margin: 0px;
+}
+
+main {
+	width: 65%;
+	display: flex;
+	margin: 40px auto;
+	justify-content: space-between;
+}
+
+/* Barra lateral */
+aside.perfil {
+	background-color: #fff;
+	width: 26%;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+/* Caixa para twittar */
+.tweet-box {
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	padding: 30px;
+}
+
+textarea#inputTwitter {
+	padding: 20px;
+	width: 100%;
+	box-sizing: border-box;
+	border-radius: 10px;
+}
+
+
+button {
+	border: none;
+	background-color: #6ad2f3;
+	color: #fff;
+	padding: 10px;
+	width: 80px;
+	align-self: flex-end;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+/* Timeline */
+section {
+	width: 70%;
+	box-sizing: border-box;
+}
+
+ul#timeline {
+	list-style: none;
+	padding: 0px;
+}
+
+ul#timeline li {
+	background-color: #fff;
+	padding: 30px;
+}
