@@ -22,9 +22,13 @@ main {
 }
 
 /* Barra lateral */
-aside.perfil {
-	background-color: #fff;
+aside {
 	width: 26%;
+}
+
+.perfil {
+	background-color: #fff;
+	width: 100%;
 	padding: 20px;
 	box-sizing: border-box;
 }
@@ -44,7 +48,6 @@ textarea#inputTwitter {
 	border-radius: 10px;
 }
 
-
 button {
 	border: none;
 	background-color: #6ad2f3;
@@ -54,6 +57,7 @@ button {
 	align-self: flex-end;
 	font-weight: bold;
 	font-size: 1em;
+	cursor: not-allowed;
 }
 
 /* Timeline */

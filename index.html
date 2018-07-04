@@ -12,14 +12,16 @@
 </div>
 
 <main>
-  <aside class="perfil">
-    <span class="nome"> Lariz Santana </span>
-    <span class="user"> @butlariz </span>
+  <aside>
+    <div class="perfil">
+      <span class="nome"> Lariz Santana </span>
+      <span class="user"> @butlariz </span>
+    </div>
   </aside>
 
   <section>
     <div class="tweet-box">
-      <textarea id="inputTwitter" placeholder="O que está acontecendo?"></textarea><br/>
+      <textarea id="inputTwitter" placeholder="O que está acontecendo?" onkeyup="countText(this.value)"></textarea><br/>
       <button> Tweet </button>
     </div>
     <ul id="timeline">
