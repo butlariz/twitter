@@ -21,8 +21,11 @@
 
   <section>
     <div class="tweet-box">
-      <textarea id="inputTwitter" placeholder="O que está acontecendo?" onkeyup="countText(this.value)"></textarea><br/>
-      <button> Tweet </button>
+      <form id="formTwitter">
+        <textarea id="inputTwitter" placeholder="O que está acontecendo?" onkeyup="countText(this.value)"></textarea><br/>
+        <span class="char-count"> 140 caracteres restantes </span>  
+        <button onclick="tweet(); return false" id="btnTweet" disabled> Tweet </button>
+      </form>
     </div>
     <ul id="timeline">
     </ul>

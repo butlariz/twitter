@@ -57,7 +57,7 @@ button {
 	align-self: flex-end;
 	font-weight: bold;
 	font-size: 1em;
-	cursor: not-allowed;
+/*	cursor: not-allowed;*/
 }
 
 /* Timeline */

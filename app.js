@@ -1,12 +1,13 @@
 var btn = document.querySelector('button');
-
-function countText(valor){
-	var sizeText = valor.length;
-	if (sizeText === 0 || sizeText > 140) {
-		btn.removeEventListener('click', tweet);
-	} else {
-		btn.addEventListener('click', tweet);
-		btn.setAttribute('style','cursor:pointer');
+showCount = document.getElementsByClassName("char-count")[0];
+ 
+function countText(value){
+	var restChar = 140 - value.length;
+	showCount.textContent = restChar + " caracteres restantes"
+	if (restChar === 140 || restChar < 0) {
+		btn.disabled = true;
+  } else {
+		btn.disabled = false;
 	}
 	return false;
 }
@@ -17,5 +18,8 @@ function tweet() {
 	postTimeline.textContent = newTweet; 
 	var timeline = document.getElementById('timeline');
 	timeline.prepend(postTimeline);
-}
-
+	document.getElementById("formTwitter").reset();
+	btn.disabled = true;
+	showCount.textContent = "140 caracteres restantes"
+	return false;
+} 
