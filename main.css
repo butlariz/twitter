@@ -35,8 +35,6 @@ aside {
 
 /* Caixa para twittar */
 .tweet-box {
-	display: flex;
-	flex-direction: column;
 	background-color: #fff;
 	padding: 30px;
 }
@@ -46,6 +44,20 @@ textarea#inputTwitter {
 	width: 100%;
 	box-sizing: border-box;
 	border-radius: 10px;
+	height: 100%;
+}
+
+.barTwitter {
+	margin-top: 10px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+span.char-count {
+	margin-right: 20px;
+	font-weight: bold;
+	color:#6ad2f3;
 }
 
 button {
@@ -57,7 +69,12 @@ button {
 	align-self: flex-end;
 	font-weight: bold;
 	font-size: 1em;
-/*	cursor: not-allowed;*/
+  cursor: pointer;
+}
+
+button[disabled] {
+	background-color: #a4b2b6;
+	cursor: not-allowed
 }
 
 /* Timeline */
