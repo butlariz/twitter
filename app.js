@@ -1,12 +1,13 @@
+var newTweet = document.getElementById("textTwitter");
 var btn = document.querySelector('button');
 showCount = document.getElementsByClassName("char-count")[0];
  
 function countText(value){
 	// Contar a quantidade de caracteres
-	var restChar = 140 - value.length;
+	var restChar = 140 - value.trim().length;
 	showCount.textContent = restChar + " caracteres restantes"
 	// Desativar ou ativar o botão
-	if (restChar < 0 || restChar > 140){
+	if (restChar < 0 || restChar === 140){
 		btn.disabled = true;	
 	} else {
 		btn.disabled = false;
@@ -24,14 +25,22 @@ function countText(value){
 	if (restChar < 0){
 		showCount.setAttribute("style", "color:#e81414");
 	}
+	//Resize TextArea
+	if (newTweet.scrollHeight > 70) {
+		if (newTweet.offsetHeight < newTweet.scrollHeight){
+			newTweet.setAttribute("style", "height:" + newTweet.scrollHeight + "px");
+		} 		
+		if (newTweet.offsetHeight > newTweet.scrollHeight){
+			newTweet.setAttribute("style", "height:" + (newTweet.scrollHeight - 15) + "px");
+		}
+	}
 	return false;
 }
 
 function tweet() {
 	// Pegar o texto e mostrar na timeline
-	var newTweet = document.getElementById("inputTwitter").value;
 	var postTimeline = document.createElement('li');
-	postTimeline.textContent = newTweet; 
+	postTimeline.textContent = newTweet.value; 
 	var timeline = document.getElementById('timeline');
 	timeline.prepend(postTimeline);
 	resetTweet();

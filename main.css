@@ -1,11 +1,13 @@
 body {
 	margin: 0px;
 	background-color: #efefef;
+	font-family: "Helvetica Neue",Arial;
 }
 
 .bar {
 	background-color: #6ad2f3;
 	padding: 10px;
+	box-shadow: 1px 2px 3px #e0e0e0;
 }
 
 h1 {
@@ -39,12 +41,12 @@ aside {
 	padding: 30px;
 }
 
-textarea#inputTwitter {
+textarea#textTwitter {
 	padding: 20px;
 	width: 100%;
 	box-sizing: border-box;
 	border-radius: 10px;
-	height: 100%;
+	overflow: hidden;
 }
 
 .barTwitter {
@@ -58,6 +60,9 @@ span.char-count {
 	margin-right: 20px;
 	font-weight: bold;
 	color:#6ad2f3;
+	text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 9pt;
 }
 
 button {
@@ -69,11 +74,12 @@ button {
 	align-self: flex-end;
 	font-weight: bold;
 	font-size: 1em;
-  cursor: pointer;
+	cursor: pointer;
+	border-radius: 20px;
 }
 
 button[disabled] {
-	background-color: #a4b2b6;
+	background-color: #bdd3da;
 	cursor: not-allowed
 }
 
@@ -86,9 +92,11 @@ section {
 ul#timeline {
 	list-style: none;
 	padding: 0px;
+	margin: 0px;
 }
 
 ul#timeline li {
 	background-color: #fff;
 	padding: 30px;
+	margin: 2px 0px;
 }
