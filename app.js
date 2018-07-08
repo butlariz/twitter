@@ -64,6 +64,7 @@ function resetTweet(){
 	// Resetar formulário, desativar o botão, e resetar o contador
 	document.getElementById("formTwitter").reset();
 	newTweet.setAttribute("rows", 2);
+	newTweet.setAttribute("style","height: 70px");
 	btn.disabled = true;
 	showCount.textContent = "140 caracteres restantes";
 	return false;
