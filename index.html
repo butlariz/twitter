@@ -13,8 +13,8 @@
 
 <main>
   <aside>
-    <div class="perfil">
-      <span class="nome"> Lariz Santana </span>
+    <div id="profile">
+      <span class="name"> Lariz Santana </span>
       <span class="user"> @butlariz </span>
     </div>
   </aside>
@@ -22,10 +22,10 @@
   <section>
     <div class="tweet-box">
       <form id="formTwitter">
-        <textarea id="textTwitter" placeholder="O que está acontecendo?" onkeydown="countText(this.value)"></textarea>
+        <textarea id="textTwitter" placeholder="O que está acontecendo?" onkeyup="countText(this.value)" rows="2"></textarea>
         <div class="barTwitter">
           <span class="char-count"> 140 caracteres restantes </span>  
-          <button onclick="tweet(); return false" id="btnTweet" disabled> Tweet </button>
+          <button id="btnTweet" disabled> Tweet </button>
         </div>
       </form>
     </div>
