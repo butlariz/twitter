@@ -37,7 +37,7 @@ function countText(value){
 		if (newTweet.offsetHeight > newTweet.scrollHeight){
 			olderRows = parseInt(newTweet.getAttribute("rows"));
 			newTweet.setAttribute("rows", olderRows - 1);
-			newTweet.setAttribute("style", "height:" + newTweet.scrollHeight +"px");
+			newTweet.setAttribute("style", "height:" + (newTweet.scrollHeight - 15) +"px");
 		}
 }
 	if (newTweet.value.length === 0) {
@@ -76,4 +76,33 @@ function showTime() {
 	theMinutes = new Date().getMinutes();
 	resultTime = "<span class='time'>" + theHour + ((theMinutes < 10) ? ":0" : ":") + theMinutes + "</span>";
 	return resultTime;
+}
+
+
+// Extra: Trocar nome e usuário 
+btnProfile = document.querySelector("#btnProfile");
+btnProfile.addEventListener("click",editProfile);
+
+function editProfile() {
+	if (btnProfile.value === "change") {
+		["name","user"].map((enterClass) => {
+			enter = document.getElementsByClassName(enterClass)[0];
+			enter.setAttribute("contenteditable","true");
+			enter.setAttribute("style","border:1px solid #ababab");
+			return enter;
+		})
+		btnProfile.value = "save";
+		btnProfile.textContent = "Salvar";
+
+	} else if (btnProfile.value === "save"){
+		["name","user"].map((enterClass) => {
+			enter = document.getElementsByClassName(enterClass)[0];
+			enter.removeAttribute("contenteditable");
+			enter.removeAttribute("style");
+			return enter;
+		})
+		btnProfile.value = "change";
+		btnProfile.textContent = "Trocar Perfil";
+	}
+	return false;
 }
